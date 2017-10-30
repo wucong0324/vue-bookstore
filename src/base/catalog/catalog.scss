@@ -1,0 +1,52 @@
+.catalog{
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    .catalog-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 30%;
+        bottom: 0;
+        background: #fff;
+        line-height: 40px;
+        overflow: hidden;
+        .catalog-title{
+            padding: 0 10px;
+            color: #ed424b;
+            display: flex;
+            text-align: center;
+            border-bottom: 1px solid #ed424b;
+            i{
+                @include wh(14px, 14px);
+            }
+            span{
+                flex: 1;
+            }
+        }
+        .content{
+            padding: 0 10px;
+        }
+        .title-item{
+            color: #666;
+            @include no-wrap();
+            @include border-1px();
+            font-size: 14px;
+            &:last-child{
+                @include border-none();
+            }
+        }
+    }
+}
+
+.fade-enter-active, .fade-leave-active{
+    transition: all .3s;
+}
+.fade-enter, .fade-leave-to{
+    transform: translate3d(-100%, 0, 0);
+}

@@ -1,0 +1,153 @@
+.book-detail {
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: #eee;
+    .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 48px;
+        box-sizing: border-box;
+        font-weight: bold;
+        background: #fff;
+        line-height: 48px;
+        color: $a-theme;
+        padding: 0 12px;
+        @include border-1px();
+    }
+    .detail-wrapper {
+        position: absolute;
+        top: 48px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        overflow: hidden;
+        .content {
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .detail-content {
+            display: flex;
+            align-items: center;
+            img {
+                width: 130px;
+                height: 175px;
+            }
+            .desc {
+                flex: 1;
+                margin-left: 20px;
+                .name {
+                    font-size: 22px;
+                    line-height: 40px;
+                    @include no-wrap();
+                }
+                .author, .type, .wordcount {
+                    font-size: 15px;
+                    color: #999;
+                    line-height: 30px;
+                    padding: 0 5px;
+                }
+                .serialize {
+                    padding: 0 10px;
+                    border-left: 1px solid #999;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .btn {
+            display: flex;
+            padding: 20px 0;
+            @include border-1px();
+            span {
+                flex: 1;
+                @include wh(100px, 34px);
+                line-height: 34px;
+                text-align: center;
+                font-size: 14px;
+                color: #666;
+                margin: 0 5px;
+                @include border-all-1px(#ccc);
+                &:first-child {
+                    background: #f00;
+                    color: #fff;
+                    @include border-all-1px(#f00);
+                }
+            }
+        }
+        .intro {
+            font-size: 16px;
+            color: #666;
+            line-height: 24px;
+            padding: 16px 0;
+            text-indent: 2em;
+        }
+        .like-title {
+            font-size: 20px;
+            color: #333;
+            padding-bottom: 18px;
+            @include border-1px();
+        }
+        .like-list{
+            display: flex;
+            margin-top: 20px;
+            .like-item{
+                flex: 1;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .drop-down {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            line-height: 30px;
+            width: 100%;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+        .load-more {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            line-height: 30px;
+            width: 100%;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            i {
+                display: inline-block;
+                margin-right: 5px;
+                vertical-align: middle;
+                @include wh(14px, 14px);
+                background: url("./loading.gif") no-repeat center center;
+            }
+        }
+    }
+    .loading-content {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .alert {
+        position: absolute;
+        top: 48px;
+        line-height: 30px;
+        width: 100%;
+        color: #fff;
+        background: rgba(0, 0, 0, .7);
+        text-align: center;
+        font-size: 12px;
+        display: none;
+    }
+}

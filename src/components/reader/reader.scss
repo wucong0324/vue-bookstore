@@ -1,0 +1,77 @@
+.reader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: $home-theme;
+    .reader-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        overflow: hidden;
+        &[bgColor='0']{
+            background: $reader-bg01;
+        }
+        &[bgColor='1']{
+            background: $reader-bg02;
+        }
+        &[bgColor='2']{
+            background: $reader-bg03;
+        }
+        &[bgColor='3']{
+            background: $reader-bg04;
+        }
+        &[bgColor='4']{
+            background: $reader-bg05;
+        }
+        &[bgColor='5']{
+            background: $reader-bg06;
+        }
+        &[mode='true']{
+            background: $reader-bg07 !important;
+        }
+        .reader-content{
+            padding: 0 10px 10px;
+            box-sizing: border-box;
+        }
+        .title{
+            color: #333;
+            font-size: 20px;
+            line-height: 48px;
+            @include border-1px();
+        }
+        .content{
+            line-height: 1.4;
+            p{
+                text-indent: 2em;
+                color: #666;
+                margin: 8px;
+            }
+        }
+        .tab{
+            display: flex;
+            span{
+                flex: 1;
+                background: #333;
+                color: #fff;
+                text-align: center;
+                line-height: 30px;
+                margin: 10px;
+                border-radius: 4px;
+            }
+        }
+    }
+    //.reader-wrapper[bgColor='1']
+}
+
+.loading-content{
+    position: absolute;
+    width: 100%;
+    top:50%;
+    transform: translateY(-50%);
+}

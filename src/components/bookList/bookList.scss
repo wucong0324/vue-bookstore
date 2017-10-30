@@ -1,0 +1,84 @@
+.bookList{
+    background: #fff;
+    padding: 10px 0;
+    .title{
+        font-size: 18px;
+        border-left: 2px solid #f00;
+        padding: 0 10px;
+        margin: 0 10px 10px;
+        color: #999;
+    }
+    .book-wrapper{
+        width: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
+        .book-item{
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            @include border-1px();
+            &:last-child{
+                @include border-none();
+            }
+        }
+        .book-img{
+            width: 80px;
+            img{
+                display: block;
+                width: 100%;
+                height: 108px;
+            }
+        }
+        .book-detail{
+            flex: 1;
+            margin-left: 10px;
+            .name{
+                font-size: 20px;
+                color: #333;
+                @include no-wrap();
+            }
+            .intro{
+                display: -webkit-box;
+                font-size: 12px;
+                color: #ccc;
+                line-height: 18px;
+                margin: 8px 0;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .desc-wrapper{
+                display: flex;
+                justify-content: space-between;
+                .author{
+                    font-size: 14px;
+                    color: $a-theme;
+                    line-height: 18px;
+                    i{
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+                .desc{
+                    font-size: 12px;
+                    span{
+                        display: inline-block;
+                        margin-left: 5px;
+                        padding: 2px 4px;
+                        @include border-all-1px(#ccc);
+                        &.yellow{
+                            color: #ffa100;
+                        }
+                        &.red{
+                            color: #ed424b;
+                        }
+                        &.blue{
+                            color: #4284ed;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
