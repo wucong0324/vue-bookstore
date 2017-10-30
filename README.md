@@ -6,13 +6,13 @@
 ## 使用说明
 
 ``` bash
-# ????
-git clone git@github.com:wucong0324/music-app.git
-# ????
+# 克隆项目
+git clone git@github.com:wucong0324/vue-bookstore.git
+# 安装依赖
 npm install
-# ?????? ??http://localhost:8080
+# 本地开发环境 访问http://localhost:8080
 npm run dev
-# ????
+# 构建生产
 npm run build
 ```
 
