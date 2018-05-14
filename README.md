@@ -12,7 +12,7 @@ git clone git@github.com:wucong0324/vue-bookstore.git
 # 启动本地数据库服务
 cd bookstore-api
 npm install
-node app,js
+node app.js
 
 # 返回vue-bookstore安装依赖
 npm install
