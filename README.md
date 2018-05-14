@@ -16,8 +16,10 @@ node app.js
 
 # 返回vue-bookstore安装依赖
 npm install
+
 # 本地开发环境 访问http://localhost:8080
 npm run dev
+
 # 构建生产
 npm run build
 ```
