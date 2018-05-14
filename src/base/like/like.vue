@@ -8,6 +8,7 @@
 </template>
 <script type="text/ecmascript-6">
     import imgUrl from '../../common/images/error_img.jpg'
+    import {api} from '@/common/js/config'
     export default {
         data() {
             return {
@@ -25,7 +26,7 @@
         },
         methods: {
             _getBookDetail(id){
-                this.$http.get(`http://39.108.14.248:3333/booklist?id=${id}`).then((res) => {
+                this.$http.get(`${api.url}/booklist?id=${id}`).then((res) => {
                     this.bookDetail = res.data;
                 })
             },

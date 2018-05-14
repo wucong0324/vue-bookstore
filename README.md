@@ -8,7 +8,13 @@
 ``` bash
 # 克隆项目
 git clone git@github.com:wucong0324/vue-bookstore.git
-# 安装依赖
+
+# 启动本地数据库服务
+cd bookstore-api
+npm install
+node app,js
+
+# 返回vue-bookstore安装依赖
 npm install
 # 本地开发环境 访问http://localhost:8080
 npm run dev

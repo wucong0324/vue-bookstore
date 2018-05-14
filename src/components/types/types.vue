@@ -27,6 +27,7 @@
     import lineBg from '@/base/line/line'
     import bookList from '@/components/bookList/bookList'
     import slide from '@/base/slide/slide'
+    import {api} from '@/common/js/config'
 
     import BScroll from 'better-scroll'
 
@@ -61,7 +62,7 @@
         },
         methods: {
             _getTypeBook(type) {
-                this.$http.get(`http://39.108.14.248:3333/type?type=${type}`).then((res) => {
+                this.$http.get(`${api.url}/type?type=${type}`).then((res) => {
                     this.typeBookList = res.data;
                     this.loading = true;
                 })
